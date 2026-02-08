@@ -1,0 +1,83 @@
+import { Link } from "react-router-dom";
+
+const Nav = () => {
+  
+  return (
+    <section className="bg-white/5 p-3 w-6xl ml-52 mt-5 rounded-4xl" >
+      <nav className="flex  justify-evenly ">
+        <div id="rightLogo" className="text-2xl font-semibold
+    relative inline-block px-4 py-2
+
+    bg-linear-to-r from-violet-600 to-indigo-600
+    bg-clip-text text-transparent
+
+    transition-all duration-300
+    hover:scale-110
+
+    before:content-['']
+    before:absolute before:inset-0
+    before:-z-10
+    before:rounded-full
+
+    before:bg-linear-to-r before:from-violet-600 before:to-indigo-600
+    before:opacity-0
+    before:blur-lg
+    before:transition-opacity before:duration-300
+
+    hover:before:opacity-20
+  ">
+          <a
+            href="/"
+            className="bg-linear-to-r from-violet-600 to-indigo-600 bg-clip-text text-transparent
+            "
+          >
+            Atharv
+          </a>
+        </div>
+        <div id="Leftbtn" className="flex items-center justify-center">
+          <Link to="/About" className="ml-5 
+                    hover:underline decoration-indigo-600 underline-offset-30
+                    transition duration-300 ease-in-out
+                    hover: translate-y-1
+                    hover:scale-85
+                    after:content-['']
+                    after:transition-[width] after:duration-300 
+                    hover:after:w-full">About</Link>
+         
+          <Link to="/BoxProjects"
+            className="ml-5 
+                    hover:underline decoration-indigo-600 underline-offset-30
+                    transition duration-300 ease-in-out
+                    hover: translate-y-1
+                    hover:scale-85
+                    "
+          >
+            Projects
+          </Link>
+          <Link to="/About"
+            className="ml-5 
+                    hover:underline decoration-indigo-600 underline-offset-30
+                    transition duration-300 ease-in-out
+                    hover: translate-y-1
+                    hover:scale-85
+                    "
+          >
+            Goals
+          </Link>
+          <Link to="/About"
+            className="ml-5 
+                    hover:underline decoration-indigo-600 underline-offset-30
+                    transition duration-300 ease-in-out
+                    hover: translate-y-1
+                    hover:scale-85
+                    "
+          >
+            Current Expertis
+          </Link>
+        </div>
+      </nav>
+    </section>
+  );
+};
+
+export default Nav;
