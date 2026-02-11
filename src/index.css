@@ -1,6 +1,9 @@
 @import "tailwindcss";
 
 /* font genralization */
+body{
+  cursor: url('/cursor-hacker.png'), auto;
+}
 
 
 .tasa-explorer {
@@ -21,3 +24,47 @@ body {
 h1 { font-weight: 550; }
 h2 { font-weight: 500; }
 p  { font-weight: 400; }
+
+/* scrollbar invisible */
+
+::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+}
+
+
+@keyframes orb {
+  0% {transform: rotate(0deg);}
+  100% {transform: rotate(360deg);}
+}
+
+@keyframes oA {
+   0% {transform: rotate(360deg);}
+  100% {transform: rotate(0deg);}
+}
+
+.animate_orb{
+ animation: orb 8s linear infinite;
+}
+
+.objectAnimation{
+  animation: oA 8s linear infinite;}
+
+@keyframes orb_oppo{
+   0% {transform: rotate(360deg);}
+  100% {transform: rotate(0deg);}
+}
+
+@keyframes oA_oppo {
+  0% {transform: rotate(0deg);}
+  100% {transform: rotate(360deg);}
+}
+
+  .animate_orb_oppo{
+    animation: orb_oppo 8s linear infinite;
+  }
+
+
+  .objectAnimation_oppo{
+    animation: oA_oppo 8s linear infinite;
+  }

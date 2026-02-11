@@ -1,60 +1,67 @@
 import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
+import Right from "./Right";
+
+const symbols = ["{", "+", "*", "6", "a", ">", "!", "}", ".", "#", "$", "%"];
+
 const Center_left = () => {
+  const indexRef = useRef(0);
+  const revealRef = useRef(0);
 
-  const count = useRef(0);
-
-  const [index, setIndex] = useState(0);
-  const [word, setWord] = useState("SOmething1");
-  const [printable, setPrintable] = useState("");
-
-  const arrayOfNames = [
+  const titles = [
     "Web Developer",
     "CyberSecurity Enthusiast",
     "Motivator",
-    "Futuer DevOps Engineer",
+    "Future DevOps Engineer",
     "Tech Innovator",
   ];
 
-  const [theOneUWanted, setTheOneUWanted] = useState(
-    Array(arrayOfNames[0].length).fill("%")
-  );
+  const [printable, setPrintable] = useState("");
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      const newIndex = (index + 1) % arrayOfNames.length;
-      const newWord = arrayOfNames[newIndex];
+    startCycle();
+    return () => clearInterval(window.revealTimer);
+  }, []);
 
-      setWord(newWord);
-      setIndex(newIndex);
+  function startCycle() {
+    revealWord(titles[indexRef.current]);
 
-      startReveal(newWord);
-    }, 3000);
+    setInterval(() => {
+      indexRef.current = (indexRef.current + 1) % titles.length;
+      revealWord(titles[indexRef.current]);
+    }, 8000);
+  }
 
-    return () => clearTimeout(timer);
-  }, [index]);
+  function revealWord(word) {
+    revealRef.current = 0;
 
-  function startReveal(newWord) {
-    const afterSplit = newWord.split("");
-    count.current = 0;
+    let temp = Array(word.length)
+      .fill("")
+      .map(() => symbols[Math.floor(Math.random() * symbols.length)]);
 
-    let temp =["$", ")","{","]","@","|","!", "&","^","."];
+    clearInterval(window.revealTimer);
 
-    const interval = setInterval(() => {
-      if (count.current >= afterSplit.length) {
-        clearInterval(interval);
+    window.revealTimer = setInterval(() => {
+      if (revealRef.current >= word.length) {
+        clearInterval(window.revealTimer);
+        setPrintable(word);
         return;
       }
 
-      temp[count.current] = afterSplit[count.current];
-      count.current++;
+      temp = temp.map((char, i) =>
+        i <= revealRef.current
+          ? word[i]
+          : symbols[Math.floor(Math.random() * symbols.length)]
+      );
 
-      setTheOneUWanted([...temp]);
       setPrintable(temp.join(""));
-    }, 120);
+      revealRef.current++;
+    }, 160);
   }
+
   return (
-    <section
+    <main >
+   <section
       className="
 h-105 w-125  m-2.5 rounded-4xl mt-26 ml-16 p-14 relative
 bg-white/5
@@ -63,7 +70,7 @@ bg-white/5
       <div>
         <h2 className=" text-4xl w-ls h-40">
           You can call me <br />
-          <span className="bg-linear-to-r from-violet-600 to-indigo-600 bg-clip-text text-transparent">
+          <span className="bg-linear-to-r from-violet-600 to-indigo-600 bg-clip-text text-transparent max-w-[5vw]">
             {printable}
           </span>
         </h2>
@@ -95,6 +102,9 @@ bg-white/5
         </button>
       </div>
     </section>
+
+    <Right />
+</main>
   );
 };
 

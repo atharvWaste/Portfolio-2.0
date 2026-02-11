@@ -1,7 +1,7 @@
 const Right=()=>{
     return(
         <section>
-            <div className="w-100 h-100 ml-250 -mt-125">
+            <div className="w-[24vw] h-[24vh] ml-200 -mt-125 ">
           <img src="../src/Assats/Lord.png"/></div>
           
         </section>
