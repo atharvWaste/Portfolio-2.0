@@ -1,0 +1,5 @@
+.Filter{
+    opacity: 0.4;
+    filter: grayscale(100%) brightness(1.2); 
+    pointer-events: none;
+}

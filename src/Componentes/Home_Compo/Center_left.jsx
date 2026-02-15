@@ -29,7 +29,7 @@ const Center_left = () => {
     setInterval(() => {
       indexRef.current = (indexRef.current + 1) % titles.length;
       revealWord(titles[indexRef.current]);
-    }, 8000);
+    }, 7500);
   }
 
   function revealWord(word) {
@@ -60,7 +60,7 @@ const Center_left = () => {
   }
 
   return (
-    <main >
+    <main className=" m-[15vh] flex  justify-between">
    <section
       className="
 h-105 w-125  m-2.5 rounded-4xl mt-26 ml-16 p-14 relative
@@ -77,7 +77,7 @@ bg-white/5
         <h3 className="w-ls transition-transform ease-out duration-700">
           Use AI
           <span className="bg-linear-to-r from-[#8e008b]  to-[#5c008b] bg-clip-text text-transparent text-2xl ml-2 mr-2">
-            Atharv's Inteligents
+            Atharv's Intelligents
           </span>
           in Creating World
         </h3>
@@ -88,7 +88,7 @@ bg-white/5
           hover:scale-110
           "
         >
-          <Link to="/About">About Me</Link>
+          <Link to="/About">Contect Me</Link>
         </button>
 
         <button

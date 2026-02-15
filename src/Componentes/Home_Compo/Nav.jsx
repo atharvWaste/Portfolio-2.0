@@ -3,7 +3,9 @@ import { Link } from "react-router-dom";
 const Nav = () => {
   
   return (
-    <section className="bg-white/5 p-3 w-6xl ml-52 mt-5 rounded-4xl" >
+    <section className="bg-[#26262675] p-3 w-6xl ml-52 mt-10  border-[#131313b0]  relative" >
+       <span className="absolute top-0 left-0 w-3 h-3 border-t border-l border-blue-900 "></span>
+       <span className="absolute bottom-0 right-0 w-3 h-3 border-b border-r border-blue-900 "></span>
       <nav className="flex  justify-evenly ">
         <div id="rightLogo" className="text-2xl font-semibold
     relative inline-block px-4 py-2
@@ -34,8 +36,8 @@ const Nav = () => {
             Atharv
           </a>
         </div>
-        <div id="Leftbtn" className="flex items-center justify-center">
-          <Link to="/About" className="ml-5 
+        <div id="Leftbtn" className="flex relative -top-1 left-5 items-center justify-center">
+          <Link to="/AboutBox" className="ml-5 
                     hover:underline decoration-indigo-600 underline-offset-30
                     transition duration-300 ease-in-out
                     hover: translate-y-1
@@ -54,7 +56,7 @@ const Nav = () => {
           >
             Projects
           </Link>
-          <Link to="/About"
+          <Link to="/ExpertiesBox"
             className="ml-5 
                     hover:underline decoration-indigo-600 underline-offset-30
                     transition duration-300 ease-in-out
@@ -62,9 +64,9 @@ const Nav = () => {
                     hover:scale-85
                     "
           >
-            Goals
+            Skill Zone
           </Link>
-          <Link to="/About"
+          <Link to="/ContectBox"
             className="ml-5 
                     hover:underline decoration-indigo-600 underline-offset-30
                     transition duration-300 ease-in-out
@@ -72,7 +74,7 @@ const Nav = () => {
                     hover:scale-85
                     "
           >
-            Current Expertis
+            ContectBox
           </Link>
         </div>
       </nav>
