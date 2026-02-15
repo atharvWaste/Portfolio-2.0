@@ -88,7 +88,7 @@ bg-white/5
           hover:scale-110
           "
         >
-          <Link to="/About">Contect Me</Link>
+          <Link to="/AboutBox">Contect Me</Link>
         </button>
 
         <button

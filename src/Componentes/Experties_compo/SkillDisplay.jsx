@@ -19,64 +19,64 @@ const SkillDisplay = () => {
           <div className="w-full h-[60%]  flex align-super">
             <div className="Filter w-[60%] m-2 h-[40%] top-10 relative flex flex-col justify-center align-middle">
               <img
-                className="h-[40%] brightness-90 grayscale-10"
-                src="/vite.svg"
+                className="h-[80%] brightness-100"
+                src="src\lanLogo\javascript.svg"
                 alt=""
               />
               <h2 className="text-30px text-white/30 group-hover:text-blue-400 transition-colors flex justify-center-safe mt-1 ">
-                Name
+               Javascript
               </h2>
             </div>
             <div className="Filter w-[60%] m-2 h-[40%] top-10 relative flex flex-col justify-center align-middle">
               <img
-                className="h-[40%] brightness-90 grayscale-10"
-                src="/vite.svg"
+                className="h-[80%] brightness-100"
+                src="src\lanLogo\mongoose.svg"
                 alt=""
               />
               <h2 className="text-30px text-white/30 group-hover:text-blue-400 transition-colors flex justify-center-safe mt-1 ">
-                Name
+               Mongoose
               </h2>
             </div>
             <div className="Filter w-[60%] m-2 h-[40%] top-10 relative flex flex-col justify-center align-middle">
               <img
-                className="h-[40%] brightness-90 grayscale-10"
-                src="/vite.svg"
+                className="h-[80%] brightness-100"
+                src="src\lanLogo\react.svg"
                 alt=""
               />
               <h2 className="text-30px text-white/30 group-hover:text-blue-400 transition-colors flex justify-center-safe mt-1 ">
-                Name
+                ReactJs
               </h2>
             </div>
           </div>
           <div className="w-full h-[60%]  flex">
             <div className="Filter w-[60%] m-2 h-[40%] top-10 relative flex flex-col justify-center align-middle">
               <img
-                className="h-[40%] brightness-90 grayscale-10"
-                src="/vite.svg"
+                className="h-[80%] brightness-100"
+                src="src\lanLogo\nodejs.svg"
                 alt=""
               />
               <h2 className="text-30px text-white/30 group-hover:text-blue-400 transition-colors flex justify-center-safe mt-1 ">
-                Name
+               nodejs
               </h2>
             </div>
             <div className="Filter w-[60%] m-2 h-[40%] top-10 relative flex flex-col justify-center align-middle">
               <img
-                className="h-[40%] brightness-90 grayscale-10"
-                src="/vite.svg"
+                className="h-[70%] brightness-100 "
+                src="src\lanLogo\tailwindcss.svg"
                 alt=""
               />
-              <h2 className="text-30px text-white/30 group-hover:text-blue-400 transition-colors flex justify-center-safe mt-1 ">
-                Name
+              <h2 className="text-30px text-white/30 group-hover:text-blue-400 transition-colors flex justify-center-safe">
+                TailwindCss
               </h2>
             </div>
             <div className="Filter w-[60%] m-2 h-[40%] top-10 relative flex flex-col justify-center align-middle">
               <img
-                className="h-[40%] brightness-90 grayscale-10"
-                src="/vite.svg"
+                className="h-[80%] brightness-100"
+                src="src\lanLogo\python.svg"
                 alt=""
               />
               <h2 className="text-30px text-white/30 group-hover:text-blue-400 transition-colors flex justify-center-safe mt-1 ">
-                Name
+                Python
               </h2>
             </div>
           </div>

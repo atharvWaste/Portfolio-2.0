@@ -31,43 +31,29 @@ p  { font-weight: 400; }
   width: 0px;
   height: 0px;
 }
-
-
-@keyframes orb {
-  0% {transform: rotate(0deg);}
-  100% {transform: rotate(360deg);}
+@keyframes orbit {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
 
-@keyframes oA {
-   0% {transform: rotate(360deg);}
-  100% {transform: rotate(0deg);}
+@keyframes orbit-reverse {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(-360deg); }
 }
 
-.animate_orb{
- animation: orb 8s linear infinite;
+.animate-orbit {
+  animation: orbit 20s linear infinite;
+  transform-style: preserve-3d;
 }
 
-.objectAnimation{
-  animation: oA 8s linear infinite;}
-
-@keyframes orb_oppo{
-   0% {transform: rotate(360deg);}
-  100% {transform: rotate(0deg);}
+.animate-orbit-reverse {
+  animation: orbit-reverse 20s linear infinite;
 }
 
-@keyframes oA_oppo {
-  0% {transform: rotate(0deg);}
-  100% {transform: rotate(360deg);}
+.rotate-x-60 {
+  transform: rotateX(65deg) rotateY(-15deg); /* This creates the 3D "tilt" */
 }
 
-  .animate_orb_oppo{
-    animation: orb_oppo 8s linear infinite;
-  }
-
-
-  .objectAnimation_oppo{
-    animation: oA_oppo 8s linear infinite;
-  
-  }
-
-
+.rotate-x--60 {
+  transform: rotateY(15deg) rotateX(-65deg); /* Counter-tilts the logo so it faces the user */
+}

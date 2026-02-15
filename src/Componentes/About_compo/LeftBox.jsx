@@ -5,14 +5,15 @@ const LeftBox = () => {
     <section>
 
     <main className=" w-screen overflow-x-clip h-screen flex justify-between">
-      <section className=" relative top-26  m-30 h-85 p-10 rounded-3xl  bg-[#20202045] w-[75vw]  border-l-[0.25px] border-t-[0.25px] border-[#212121]">
+      <section className=" relative top-26  m-30 h-85 p-10 bg-[#20202045] w-[75vw] border-[0.005px]  border-blue-700">
+        <span className="absolute top-0 left-0 w-3 h-3 border-t-2 border-l-2 border-blue-700 "></span>
+       <span className="absolute bottom-0 right-0 w-3 h-3 border-b-2 border-r-2 border-blue-700 "></span>
+
         <div className="">
           <h1 className="text-4xl ml-[5vw]">Atharv R. Waste</h1>
-          <p className="mt-[3vh]">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, nam
-            sunt ipsum fugiat voluptatum iure excepturi ea animi veritatis
-            numquam tempore fuga voluptates sequi rerum officiis! Deserunt nobis
-            reprehenderit distinctio.
+          <p className="mt-[3vh] mask-linear-2">
+           Hi! I am Atherv , I am Presiving the Enginering from <span className="text-[#A855F7] text-xl font-mono">KITCOEK College Of Enginering </span>,I belive in adaptivity, I Have Stonge desire to code and create new thing ,      Acpting the current state and getting the result in that direction. I love to make myself better then the last stage .
+
           </p>
           <div className="flex items-center justify-evenly mt-15">
             <button
