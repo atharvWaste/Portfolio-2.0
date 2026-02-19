@@ -7,6 +7,8 @@ const symbols = ["{", "+", "*", "6", "a", ">", "!", "}", ".", "#", "$", "%"];
 const Center_left = () => {
   const indexRef = useRef(0);
   const revealRef = useRef(0);
+  const cycleTimerRef = useRef(null);
+  const revealTimerRef = useRef(null);
 
   const titles = [
     "Web Developer",
@@ -19,31 +21,32 @@ const Center_left = () => {
   const [printable, setPrintable] = useState("");
 
   useEffect(() => {
-    startCycle();
-    return () => clearInterval(window.revealTimer);
-  }, []);
+    // Initial start
+    revealWord(titles[0]);
 
-  function startCycle() {
-    revealWord(titles[indexRef.current]);
-
-    setInterval(() => {
+    // Cycle titles every 5 seconds
+    cycleTimerRef.current = setInterval(() => {
       indexRef.current = (indexRef.current + 1) % titles.length;
       revealWord(titles[indexRef.current]);
-    }, 7500);
-  }
+    }, 5000);
+
+    return () => {
+      clearInterval(cycleTimerRef.current);
+      clearInterval(revealTimerRef.current);
+    };
+  }, []);
 
   function revealWord(word) {
     revealRef.current = 0;
+    clearInterval(revealTimerRef.current);
 
     let temp = Array(word.length)
       .fill("")
       .map(() => symbols[Math.floor(Math.random() * symbols.length)]);
 
-    clearInterval(window.revealTimer);
-
-    window.revealTimer = setInterval(() => {
+    revealTimerRef.current = setInterval(() => {
       if (revealRef.current >= word.length) {
-        clearInterval(window.revealTimer);
+        clearInterval(revealTimerRef.current);
         setPrintable(word);
         return;
       }
@@ -56,55 +59,59 @@ const Center_left = () => {
 
       setPrintable(temp.join(""));
       revealRef.current++;
-    }, 160);
+    }, 100);
   }
 
   return (
-    <main className=" m-[15vh] flex  justify-between">
-   <section
-      className="
-h-105 w-125  m-2.5 rounded-4xl mt-26 ml-16 p-14 relative
-bg-white/5
-"
-    >
-      <div>
-        <h2 className=" text-4xl w-ls h-40">
-          You can call me <br />
-          <span className="bg-linear-to-r from-violet-600 to-indigo-600 bg-clip-text text-transparent max-w-[5vw]">
-            {printable}
-          </span>
-        </h2>
-        <h3 className="w-ls transition-transform ease-out duration-700">
-          Use AI
-          <span className="bg-linear-to-r from-[#8e008b]  to-[#5c008b] bg-clip-text text-transparent text-2xl ml-2 mr-2">
-            Atharv's Intelligents
-          </span>
-          in Creating World
-        </h3>
-        <button
-          className="bg-linear-to-r from-violet-600 to-indigo-600 
-          m-7 w-25 h-10 rounded-4xl
-          transition-transform duration-300 ease-out
-          hover:scale-110
-          "
-        >
-          <Link to="/AboutBox">Contect Me</Link>
-        </button>
+    <main className="min-h-screen w-full bg-black text-white flex flex-col lg:flex-row items-center justify-center p-6 md:p-12 gap-10 overflow-x-hidden">
+      <section className="relative w-full lg:w-1/2 flex flex-col justify-center items-center lg:items-start text-center lg:text-left">
+        
+        {/* Container: Min-height prevents the whole page from jumping */}
+        <div className="rounded-4xl bg-white/5 p-8 w-full max-w-2xl min-h-112.5 flex flex-col justify-center transition-all duration-700 border border-white/10">
+          
+          <h2 className="text-3xl md:text-5xl font-medium mb-4 leading-tight">
+            You can call me <br />
+            
+            {/* Height-locked wrapper for the animated text */}
+            <div className="min-h-[1.5em] flex items-center justify-center lg:justify-start">
+               <span className="block bg-linear-to-r from-violet-400 to-indigo-400 bg-clip-text text-transparent font-mono text-2xl md:text-4xl lg:text-5xl wrap-break-words">
+                {printable || "\u00A0"}
+              </span>
+            </div>
+          </h2>
 
-        <button
-          className="bg-linear-to-r from-[#5c008b] to-[#c670ff]
-          m-7 w-25 h-10 rounded-4xl
-         transition-transform duration-300 ease-out
-    hover:scale-110
-          "
-        >
-          <Link to="/About">Resume</Link>
-        </button>
-      </div>
-    </section>
+          <div className="mt-6">
+            <h3 className="text-gray-400 text-lg md:text-xl font-normal">
+              Use AI
+              <span className="bg-linear-to-r from-fuchsia-500 to-purple-500 bg-clip-text text-transparent text-xl md:text-2xl font-semibold mx-2 italic">
+                Atharv's Intelligence
+              </span>
+              in Creating World
+            </h3>
 
-    <Right />
-</main>
+            <div className="flex flex-wrap justify-center lg:justify-start gap-4 mt-10">
+              <Link 
+                to="/AboutBox"
+                className="bg-linear-to-r from-violet-600 to-indigo-600 px-8 py-3 rounded-full hover:scale-105 transition-transform text-sm font-medium"
+              >
+                Contact Me
+              </Link>
+
+              <Link 
+                to="/About"
+                className="bg-linear-to-r from-purple-900 to-fuchsia-800 px-8 py-3 rounded-full hover:scale-105 transition-transform text-sm font-medium border border-white/10"
+              >
+                Resume
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="w-full lg:w-1/2 flex justify-center">
+        <Right />
+      </section>
+    </main>
   );
 };
 

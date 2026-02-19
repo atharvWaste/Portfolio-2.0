@@ -1,5 +1,4 @@
 
-
 import Nav from "../Home_Compo/Nav";
 const IntroAbout = () => {
 
@@ -23,7 +22,7 @@ const IntroAbout = () => {
         left: -60,
         fontSize: '18vw',
         fontWeight: '900',
-        color: 'rgba(255,255,255,0.04)', 
+        color: 'rgba(255,255,255,0.03)', 
         whiteSpace: 'nowrap',
         pointerEvents: 'none',
         textTransform: 'uppercase'
@@ -58,8 +57,7 @@ const IntroAbout = () => {
           marginTop: '30px',
           lineHeight: '1.6' 
         }}>
-          The Exihibition of the Skills I Perceived By My own.
-        </p>
+Calculating moves in chess, executing excellence in code.        </p>
       </div>
 
       <div style={{ 

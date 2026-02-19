@@ -58,8 +58,7 @@ const  ExpirianceIntro= () => {
           marginTop: '30px',
           lineHeight: '1.6' 
         }}>
-          The Exihibition of the Skills I Perceived By My own.
-        </p>
+Calculating moves in chess, executing excellence in code.        </p>
       </div>
 
       <div style={{ 

@@ -1,4 +1,3 @@
-import React, { useEffect } from 'react';
 
 import LeftBox from "./LeftBox";
 import Education from "./Education";
@@ -8,7 +7,7 @@ import IntroAbout from "./IntroAbout";
 const About = () => {
     
     return (
-        <section className="bg-black text-white w-full min-h-screen overflow-visible">
+        <section className="bg-black text-white w-screen min-h-screen overflow-visible ">
           <IntroAbout />
           <LeftBox />
           <Education />
