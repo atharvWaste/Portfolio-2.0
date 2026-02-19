@@ -11,7 +11,7 @@ const ProjectOne = () => {
       year: "2025",
       tech: "MERN / API",
       Gitlink: "https://github.com/atharvWaste/Weather_app",
-      image: "/src/Assats/test.png",
+      image: "/Assats/test.png",
       LiveLink: "https://weather-app-alpha-sooty-96.vercel.app/"
     },
   ];

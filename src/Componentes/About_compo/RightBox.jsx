@@ -1,12 +1,12 @@
 const skills = [
-  { name: 'Git', icon: '/src/lanLogo/git.svg', angle: '0deg' },
-  { name: 'React', icon: '/src/lanLogo/react.svg', angle: '45deg' },
-  { name: 'Node', icon: '/src/lanLogo/nodejs.svg', angle: '90deg' },
-  { name: 'JS', icon: '/src/lanLogo/javascript.svg', angle: '135deg' },
-  { name: 'Tailwind', icon: '/src/lanLogo/tailwindcss.svg', angle: '180deg' },
-  { name: 'Python', icon: '/src/lanLogo/python.svg', angle: '225deg' },
-  { name: 'TS', icon: '/src/lanLogo/typescript.svg', angle: '270deg' },
-  { name: 'Mongoose', icon: '/src/lanLogo/mongoose.svg', angle: '315deg' },
+  { name: 'Git', icon: '/lanLogo/git.svg', angle: '0deg' },
+  { name: 'React', icon: '/lanLogo/react.svg', angle: '45deg' },
+  { name: 'Node', icon: '/lanLogo/nodejs.svg', angle: '90deg' },
+  { name: 'JS', icon: '/lanLogo/javascript.svg', angle: '135deg' },
+  { name: 'Tailwind', icon: '/lanLogo/tailwindcss.svg', angle: '180deg' },
+  { name: 'Python', icon: '/lanLogo/python.svg', angle: '225deg' },
+  { name: 'TS', icon: '/lanLogo/typescript.svg', angle: '270deg' },
+  { name: 'Mongoose', icon: '/lanLogo/mongoose.svg', angle: '315deg' },
 ];
 
 const RightBox=()=>{

@@ -23,7 +23,7 @@ const SkillDisplay = () => {
           <div className="flex flex-col items-center justify-center w-[40%] md:w-[25%] group transition-all">
             <img
               className="h-12 md:h-16 brightness-100 group-hover:scale-110 transition-transform"
-              src="src/lanLogo/javascript.svg"
+              src="/lanLogo/javascript.svg"
               alt="JS"
             />
             <h2 className="text-[10px] md:text-[14px] text-white/30 group-hover:text-blue-400 transition-colors mt-3 uppercase tracking-widest">
@@ -35,7 +35,7 @@ const SkillDisplay = () => {
           <div className="flex flex-col items-center justify-center w-[40%] md:w-[25%] group transition-all">
             <img
               className="h-12 md:h-16 brightness-100 group-hover:scale-110 transition-transform"
-              src="src/lanLogo/mongoose.svg"
+              src="/lanLogo/mongoose.svg"
               alt="Mongoose"
             />
             <h2 className="text-[10px] md:text-[14px] text-white/30 group-hover:text-blue-400 transition-colors mt-3 uppercase tracking-widest">
@@ -47,7 +47,7 @@ const SkillDisplay = () => {
           <div className="flex flex-col items-center justify-center w-[40%] md:w-[25%] group transition-all">
             <img
               className="h-12 md:h-16 brightness-100 group-hover:scale-110 transition-transform"
-              src="src/lanLogo/react.svg"
+              src="/lanLogo/react.svg"
               alt="React"
             />
             <h2 className="text-[10px] md:text-[14px] text-white/30 group-hover:text-blue-400 transition-colors mt-3 uppercase tracking-widest">
@@ -59,7 +59,7 @@ const SkillDisplay = () => {
           <div className="flex flex-col items-center justify-center w-[40%] md:w-[25%] group transition-all">
             <img
               className="h-12 md:h-16 brightness-100 group-hover:scale-110 transition-transform"
-              src="src/lanLogo/nodejs.svg"
+              src="/lanLogo/nodejs.svg"
               alt="Node"
             />
             <h2 className="text-[10px] md:text-[14px] text-white/30 group-hover:text-blue-400 transition-colors mt-3 uppercase tracking-widest">
@@ -71,7 +71,7 @@ const SkillDisplay = () => {
           <div className="flex flex-col items-center justify-center w-[40%] md:w-[25%] group transition-all">
             <img
               className="h-12 md:h-16 brightness-100 group-hover:scale-110 transition-transform"
-              src="src/lanLogo/tailwindcss.svg"
+              src="/lanLogo/tailwindcss.svg"
               alt="Tailwind"
             />
             <h2 className="text-[10px] md:text-[14px] text-white/30 group-hover:text-blue-400 transition-colors mt-3 uppercase tracking-widest">
@@ -83,7 +83,7 @@ const SkillDisplay = () => {
           <div className="flex flex-col items-center justify-center w-[40%] md:w-[25%] group transition-all">
             <img
               className="h-12 md:h-16 brightness-100 group-hover:scale-110 transition-transform"
-              src="src/lanLogo/python.svg"
+              src="/lanLogo/python.svg"
               alt="Python"
             />
             <h2 className="text-[10px] md:text-[14px] text-white/30 group-hover:text-blue-400 transition-colors mt-3 uppercase tracking-widest">
