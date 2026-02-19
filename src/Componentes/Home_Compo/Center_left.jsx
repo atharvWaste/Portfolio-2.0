@@ -97,12 +97,12 @@ const Center_left = () => {
                 Contact Me
               </Link>
 
-              <Link 
-                to="/About"
+              <a
+                href="https://drive.google.com/file/d/1kd9swQj62RlnHC0fW-BZlziEhkm7uLFL/export?format=pdf"
                 className="bg-linear-to-r from-purple-900 to-fuchsia-800 px-8 py-3 rounded-full hover:scale-105 transition-transform text-sm font-medium border border-white/10"
               >
                 Resume
-              </Link>
+              </a>
             </div>
           </div>
         </div>
