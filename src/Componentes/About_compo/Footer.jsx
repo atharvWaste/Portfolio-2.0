@@ -26,16 +26,17 @@ const Footer = () => {
             </div>
             <div className=" flex justify-evenly mt-10 -ml-25 ">
               <span className="insta_colo">
-                <a href="https://www.instagram.com/atharv_16o8/">
+                <a href="https://www.instagram.com/atharv_16o8/" target="_blank">
                   <Instagram size={30} />
                 </a>
               </span>
               <span className="insta_colo">
-                <a href="https://www.linkedin.com/in/atharv-vaste-814430372/">
+                <a href="https://www.linkedin.com/in/atharv-vaste-814430372/" target="_blank">
                   <Linkedin size={30} />
                 </a>
               </span>
               <span className="insta_colo">
+                <a href="https://x.com/ekalavy_darkway" target="_blank" rel="noopener noreferrer"></a>
                 <Twitter size={30} />
               </span>
             </div>
@@ -50,8 +51,8 @@ const Footer = () => {
                 <Link to="/ContectBox">Contect Us</Link>
               </div>
               <div className=" flex flex-col">
-                <a href="#">Github</a>
-                <a href="#">HackerRank</a>
+                <a href="https://github.com/atharvWaste">Github</a>
+                <a href="https://www.instagram.com/atharv_16o8/">Insta</a>
                 <a href="https://www.linkedin.com/in/atharv-vaste-814430372/">
                   linked
                 </a>

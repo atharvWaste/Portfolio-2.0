@@ -101,6 +101,7 @@ const ContactForm = () => {
               className="space-y-4"
             >
               <input
+              autoComplete='off'
                 name="from_name"
                 required
                 onFocus={() => setActiveField('name')}
@@ -115,6 +116,7 @@ const ContactForm = () => {
               />
 
               <input
+              autoComplete='off'
                 name="email"
                 type="email"
                 required
@@ -127,6 +129,7 @@ const ContactForm = () => {
               />
 
               <textarea
+              autoComplete='off'
                 name="message"
                 required
                 onFocus={() => setActiveField('message')}

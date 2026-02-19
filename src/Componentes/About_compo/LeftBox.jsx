@@ -22,7 +22,7 @@ Engineering at the intersection of logic and strategy. Whether it’s a complex 
             "
             >
             <a
-                href='#'
+                href='https://www.instagram.com/atharv_16o8/'
                 target="_blank"
                 className="group relative px-8 py-3 overflow-hidden border border-white/10 bg-white/5 transition-all hover:border-blue-500/50"
               >
@@ -41,7 +41,7 @@ Engineering at the intersection of logic and strategy. Whether it’s a complex 
             "
             >
            <a
-                href='#'
+                href='https://www.linkedin.com/in/atharv-vaste-814430372/'
                 target="_blank"
                 className="group relative px-8 py-3 overflow-hidden border border-white/10 bg-white/5 transition-all hover:border-blue-500/50"
               >
